@@ -1,0 +1,167 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CodeBit | Perfil Digital</title>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    
+    <style>
+        :root {
+            --bg-color: #0A0A0B;
+            --card-bg: #161618;
+            --primary-blue: #007AFF;
+            --accent-gold: #D4AF37;
+            --text-main: #F5F5F7;
+            --text-dim: #A1A1A6;
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Montserrat', sans-serif;
+            background-color: var(--bg-color);
+            color: var(--text-main);
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            min-height: 100vh;
+            padding: 20px;
+        }
+
+        .profile-card {
+            background-color: var(--card-bg);
+            width: 100%;
+            max-width: 400px;
+            border-radius: 24px;
+            overflow: hidden;
+            box-shadow: 0 20px 40px rgba(0,0,0,0.5);
+            text-align: center;
+            border: 1px solid #2c2c2e;
+        }
+
+        .header-banner {
+            height: 100px;
+            background: linear-gradient(135deg, var(--primary-blue), #003b80);
+        }
+
+        .avatar-container {
+            margin-top: -50px;
+            position: relative;
+        }
+
+        .avatar {
+            width: 100px;
+            height: 100px;
+            border-radius: 50%;
+            border: 4px solid var(--accent-gold);
+            object-fit: cover;
+            background-color: #333;
+        }
+
+        .info-section {
+            padding: 20px;
+        }
+
+        h1 {
+            font-size: 1.5rem;
+            margin-bottom: 5px;
+        }
+
+        p.title {
+            color: var(--text-dim);
+            font-size: 0.9rem;
+            margin-bottom: 20px;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+        }
+
+        .btn-save {
+            background-color: var(--accent-gold);
+            color: #000;
+            padding: 15px 30px;
+            border-radius: 50px;
+            text-decoration: none;
+            font-weight: bold;
+            display: inline-block;
+            margin-bottom: 30px;
+            transition: transform 0.3s ease;
+            width: 80%;
+        }
+
+        .btn-save:active {
+            transform: scale(0.95);
+        }
+
+        .social-grid {
+            display: grid;
+            grid-template-columns: repeat(4, 1fr);
+            gap: 15px;
+            padding: 0 20px 30px;
+        }
+
+        .social-item {
+            color: var(--text-main);
+            text-decoration: none;
+            font-size: 1.5rem;
+            background: #2c2c2e;
+            padding: 15px 0;
+            border-radius: 12px;
+            transition: all 0.3s ease;
+        }
+
+        .social-item:hover {
+            background: var(--primary-blue);
+            color: white;
+        }
+
+        .footer {
+            padding: 20px;
+            font-size: 0.7rem;
+            color: var(--text-dim);
+            border-top: 1px solid #2c2c2e;
+        }
+
+        /* Micro-interacción de brillo */
+        .social-item:hover {
+            box-shadow: 0 0 15px var(--primary-blue);
+        }
+    </style>
+</head>
+<body>
+
+    <div class="profile-card">
+        <div class="header-banner"></div>
+        
+        <div class="avatar-container">
+            <img src="https://via.placeholder.com/100" alt="Foto de Perfil" class="avatar">
+        </div>
+
+        <div class="info-section">
+            <h1>Tu Nombre Aquí</h1>
+            <p class="title">Software Developer | CodeBit</p>
+            
+            <a href="#" class="btn-save">
+                <i class="fa-solid fa-user-plus"></i> GUARDAR CONTACTO
+            </a>
+        </div>
+
+        <div class="social-grid">
+            <a href="https://wa.me/502XXXXXX" class="social-item"><i class="fa-brands fa-whatsapp"></i></a>
+            <a href="#" class="social-item"><i class="fa-brands fa-linkedin"></i></a>
+            <a href="mailto:correo@ejemplo.com" class="social-item"><i class="fa-solid fa-envelope"></i></a>
+            <a href="https://github.com/negociosjuridicos" class="social-item"><i class="fa-brands fa-github"></i></a>
+        </div>
+
+        <div class="footer">
+            Powered by <strong>CodeBit</strong> &copy; 2026
+        </div>
+    </div>
+
+</body>
+</html>

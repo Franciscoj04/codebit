@@ -1,0 +1,254 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CodeBit | El Futuro de tu Red de Contactos</title>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;700&display=swap" rel="stylesheet">
+    <style>
+        :root {
+            --primary-blue: #002b5c;
+            --dark-blue: #001a38;
+            --gold: #cfa43a;
+            --gold-light: #e6b84d;
+            --white: #ffffff;
+            --gray: #f4f4f4;
+        }
+
+        * { box-sizing: border-box; margin: 0; padding: 0; }
+
+        body {
+            font-family: 'Inter', sans-serif;
+            background-color: var(--white);
+            color: var(--dark-blue);
+            line-height: 1.6;
+        }
+
+        /* Hero Section */
+        .hero {
+            background: linear-gradient(135deg, var(--dark-blue) 0%, var(--primary-blue) 100%);
+            color: var(--white);
+            padding: 80px 20px;
+            text-align: center;
+            border-bottom: 5px solid var(--gold);
+        }
+
+        /* Estilo para el logo circular */
+        .logo-main {
+            /* 1. Define un tamaño fijo para asegurar que sea un cuadrado perfecto */
+            width: 150px; /* Puedes ajustar este tamaño según necesites */
+            height: 150px;
+
+            /* 2. Asegura que la imagen no se deforme si no es cuadrada originalmente */
+            object-fit: cover;
+
+            /* 3. Crea el círculo */
+            border-radius: 50%;
+
+            /* Opcional: Añade una pequeña sombra para darle profundidad */
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
+
+            /* Mantiene el margen inferior que tenías antes */
+            margin-bottom: 20px;
+        }
+
+        .hero h1 {
+            font-size: 2.5rem;
+            margin-bottom: 15px;
+            color: var(--gold);
+        }
+
+        .hero p {
+            font-size: 1.2rem;
+            max-width: 600px;
+            margin: 0 auto 30px;
+            opacity: 0.9;
+        }
+
+        /* Propuesta de Valor */
+        .value-prop {
+            padding: 60px 20px;
+            background-color: var(--gray);
+            text-align: center;
+        }
+
+        .cta-button {
+            display: inline-block;
+            background-color: var(--gold);
+            color: var(--dark-blue);
+            padding: 18px 35px;
+            border-radius: 50px;
+            text-decoration: none;
+            font-weight: bold;
+            font-size: 1.1rem;
+            transition: transform 0.3s ease;
+            box-shadow: 0 4px 15px rgba(207, 164, 58, 0.4);
+        }
+
+        .cta-button:hover {
+            transform: scale(1.05);
+            background-color: var(--gold-light);
+        }
+
+        /* Diferenciadores Grid */
+        .grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 20px;
+            padding: 40px 20px;
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+
+        .card {
+            padding: 30px;
+            border-radius: 15px;
+            background: white;
+            border: 1px solid #ddd;
+            transition: 0.3s;
+        }
+
+        .card:hover { border-color: var(--gold); box-shadow: 0 10px 20px rgba(0,0,0,0.05); }
+
+        .card h3 { color: var(--primary-blue); margin-bottom: 10px; }
+
+        /* Misión y Visión Section */
+        .identity {
+            background-color: var(--dark-blue);
+            color: white;
+            padding: 60px 20px;
+        }
+
+        .identity-container {
+            max-width: 900px;
+            margin: 0 auto;
+        }
+
+        .identity h2 { color: var(--gold); margin-bottom: 20px; text-align: center; }
+
+        .mission-vision {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 40px;
+            margin-top: 30px;
+        }
+
+        .mv-item { flex: 1; min-width: 300px; }
+
+        /* Table de Valores */
+        .values-table-container {
+            overflow-x: auto;
+            margin-top: 40px;
+        }
+
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            background: rgba(255,255,255,0.05);
+            border-radius: 10px;
+        }
+
+        th, td {
+            padding: 15px;
+            text-align: left;
+            border-bottom: 1px solid rgba(207, 164, 58, 0.3);
+        }
+
+        th { color: var(--gold); }
+
+        footer {
+            text-align: center;
+            padding: 40px;
+            font-size: 0.9rem;
+            background: #f4f4f4;
+        }
+
+        /* Responsive */
+        @media (max-width: 600px) {
+            .hero h1 { font-size: 1.8rem; }
+        }
+    </style>
+</head>
+<body>
+
+    <section class="hero">
+        <img src="codebitazul.png" alt="CodeBit Logo" class="logo-main">
+        <h1>CodeBit</h1>
+        <p>"Un toque, infinitas conexiones."</p>
+        <a href="#contacto" class="cta-button">Obtén tu Tarjeta Digital</a>
+    </section>
+
+    <section class="value-prop">
+        <h2>Tu identidad profesional, siempre actualizada.</h2>
+        <p>No solo entregas tus datos, generas una experiencia tecnológica que garantiza que nunca te olviden.</p>
+        
+        <div class="grid">
+            <div class="card">
+                <h3>⚡ NFC de Vanguardia</h3>
+                <p>Conexión instantánea sin necesidad de aplicaciones adicionales.</p>
+            </div>
+            <div class="card">
+                <h3>🔄 Tiempo Real</h3>
+                <p>Cambia tu información cuando quieras sin volver a imprimir.</p>
+            </div>
+            <div class="card">
+                <h3>🌱 Sostenible</h3>
+                <p>Una sola tarjeta para toda tu vida profesional. Cero desperdicio de papel.</p>
+            </div>
+        </div>
+    </section>
+
+    <section class="identity">
+        <div class="identity-container">
+            <h2>Nuestra Esencia</h2>
+            <div class="mission-vision">
+                <div class="mv-item">
+                    <h3>Misión</h3>
+                    <p>Transformar la manera en que los profesionales conectan, eliminando las barreras del papel mediante soluciones digitales innovadoras y sostenibles.</p>
+                </div>
+                <div class="mv-item">
+                    <h3>Visión</h3>
+                    <p>Ser la plataforma líder en identidad digital en la región, estableciendo un nuevo estándar de interacción profesional ecológico.</p>
+                </div>
+            </div>
+
+            <div class="values-table-container">
+                <table>
+                    <thead>
+                        <tr>
+                            <th>Valor</th>
+                            <th>Descripción</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>Innovación</td>
+                            <td>Buscamos constantemente las últimas tecnologías (NFC, QR, Analítica).</td>
+                        </tr>
+                        <tr>
+                            <td>Sostenibilidad</td>
+                            <td>Reducimos la huella de carbono reemplazando las tarjetas impresas.</td>
+                        </tr>
+                        <tr>
+                            <td>Simplicidad</td>
+                            <td>Herramientas intuitivas que cualquier usuario puede usar sin fricciones.</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+        </div>
+    </section>
+
+    <section class="value-prop" style="background: white;">
+        <h2>¿Listo para el siguiente paso?</h2>
+        <p>Elige entre tarjetas de PVC premium, metal, madera o adhesivos NFC.</p>
+        <br>
+        <a href="https://wa.me/TU_NUMERO" class="cta-button">Contactar un Asesor</a>
+    </section>
+
+    <footer>
+        <p>&copy; 2026 CodeBit - El futuro de tu red de contactos, hoy.</p>
+    </footer>
+
+</body>
+</html>
